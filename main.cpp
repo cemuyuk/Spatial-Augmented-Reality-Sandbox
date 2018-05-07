@@ -38,9 +38,11 @@ public:
 };
 
 //Leap Motion SampleListener method, takes in a controller object which is our Leap Motion in this case
-//and tells Connected when there is a Leap object connected to the system.
+//and tells Connected when there is a Leap object connected to the system. It starts the controller.
 void SampleListener::onConnect(const Controller& controller) {
+    
 	std::cout << "Connected" << std::endl;
+    
 }
 
 //Leap Motion receives appx. 115 FPS. Here it is described what the program is supposed to do with each of these frames. In our case, we are reading hands to understand the gestures done with them. Getting a list of gestures in each frame. Then checking if there is a gesture that is in our design.
@@ -314,11 +316,6 @@ int main(int argc, char* argv[]) {
 	
     //Starting text message
 	textWritingMethod(argc,argv);
-
-	/*while (waitCond){
-		if (!waitCond)
-			break;
-	}*/
 
 	if (!init(argc, argv)) return 1;
     if (!initKinect()) return 1;

@@ -7,8 +7,10 @@ void draw() {
    glutSwapBuffers();
 }
 
+//Execute method for OpenGL Main loop and exit
 void execute() {
     glutMainLoop();
+    
 	glutLeaveMainLoop();
 }
 
@@ -21,4 +23,5 @@ bool init(int argc, char* argv[]) {
     glutIdleFunc(draw);
 	glutFullScreen();
     return true;
+    
 }
