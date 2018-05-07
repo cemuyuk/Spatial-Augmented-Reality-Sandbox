@@ -7,5 +7,5 @@ In order to do this, you must have Kinect SDK and Leap Motion SDK downloaded on 
 Additionally, OpenGL's 'freeglut' library is used for Topological Mapping on the sand.
 Make sure to add that to your system/program's references.
 
-
+Lastly, glut.cpp and sdl.cpp files are overriden. Current program has specific needs for hand gesture reading and topological mapping. In order to meet those needs. We have added some methods and overridden some methods in glut. Do not hesitate to send e-mails for further questions about this.
 
